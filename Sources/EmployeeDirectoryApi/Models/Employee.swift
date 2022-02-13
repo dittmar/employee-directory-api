@@ -28,6 +28,19 @@ struct Employee: Decodable {
     case webMarketing = "Public Web & Marketing"
   }
   
+  // Create a mapping between our Swift property names and the JSON payload property names
+  enum CodingKeys: String, CodingKey {
+    case biography
+    case emailAddress = "email_address"
+    case employeeType = "employee_type"
+    case fullName = "full_name"
+    case largePhotoUrlString = "photo_url_large"
+    case phoneNumber = "phone_number"
+    case smallPhotoUrlString = "photo_url_small"
+    case team
+    case uuid
+  }
+  
   let uuid: String
   let fullName: String
   let phoneNumber: String

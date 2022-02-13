@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct GetEmployeesEndpoint: Endpoint {  
-  typealias Response = [Employee]
+struct GetEmployeesEndpoint: Endpoint {
+  struct Employees: Decodable {
+    let employees: [Employee]
+  }
+  typealias Response = Employees
   
   var method: HttpMethod { .get }
   var path: String { "\(Self.awsBaseUrl)/employees.json" }

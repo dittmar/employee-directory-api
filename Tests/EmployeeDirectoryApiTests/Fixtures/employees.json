@@ -1,0 +1,48 @@
+{
+  "employees" : [
+    {
+      "uuid" : "a98f8a2e-c975-4ba3-8b35-01f719e7de2d",
+
+      "full_name" : "Camille Rogers",
+      "phone_number" : "5558531970",
+      "email_address" : "crogers.demo@squareup.com",
+      "biography" : "Designer on the web marketing team.",
+
+      "photo_url_small" : "https://s3.amazonaws.com/sq-mobile-interview/photos/5095a907-abc9-4734-8d1e-0eeb2506bfa8/small.jpg",
+      "photo_url_large" : "https://s3.amazonaws.com/sq-mobile-interview/photos/5095a907-abc9-4734-8d1e-0eeb2506bfa8/large.jpg",
+
+      "team" : "Public Web & Marketing",
+      "employee_type" : "PART_TIME"
+    },
+
+    {
+      "uuid" : "7fb13023-d013-41ac-84f1-e554890ccb32",
+
+      "full_name" : "Tim Nakamura",
+      "phone_number" : "5557510409",
+      "email_address" : "tnakamura.demo@squareup.com",
+      "biography" : "Hardware packaging designer on the hardware team, working from LA.",
+      
+      "photo_url_small" : "https://s3.amazonaws.com/sq-mobile-interview/photos/e2b088e6-0b8d-4295-a66c-d7181cdec3d6/small.jpg",
+      "photo_url_large" : "https://s3.amazonaws.com/sq-mobile-interview/photos/e2b088e6-0b8d-4295-a66c-d7181cdec3d6/large.jpg",
+
+      "team" : "Hardware",
+      "employee_type" : "CONTRACTOR"
+    },
+
+    {
+      "uuid" : "d8265dcd-1914-4f93-8068-07f5426f0866",
+
+      "full_name" : "Jack Dorsey",
+      "phone_number" : "5554544932",
+      "email_address" : "jdorsey.demo@squareup.com",
+      "biography" : "I work for you.",
+
+      "photo_url_small" : "https://s3.amazonaws.com/sq-mobile-interview/photos/f8fc3c8e-b8ed-41d8-9005-537cf657c169/small.jpg",
+      "photo_url_large" : "https://s3.amazonaws.com/sq-mobile-interview/photos/f8fc3c8e-b8ed-41d8-9005-537cf657c169/large.jpg",
+
+      "team" : "Core",
+      "employee_type" : "FULL_TIME"
+    }
+  ]
+}
