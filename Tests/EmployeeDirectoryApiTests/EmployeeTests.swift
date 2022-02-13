@@ -44,4 +44,16 @@ final class EmployeeTests: XCTestCase {
     XCTAssertEqual(.webMarketing, camilleRogers?.team)
     XCTAssertEqual(.partTime, camilleRogers?.employeeType)
   }
+  
+  func testGetEmployeesEmpty() throws {
+    let employees = try JSONDecoder().decode(GetEmployeesEndpoint.Employees.self, from: readJson(from: "empty_employees")!).employees
+    
+    XCTAssertTrue(employees.isEmpty)
+  }
+  
+  func testGetEmployeesMalformed() throws {
+    let json = try readJson(from: "malformed_employees")!
+    
+    XCTAssertThrowsError(try JSONDecoder().decode(GetEmployeesEndpoint.Employees.self, from: json))
+  }
 }

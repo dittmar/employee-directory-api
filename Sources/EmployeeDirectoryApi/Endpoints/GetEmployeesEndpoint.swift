@@ -7,12 +7,27 @@
 
 import Foundation
 
-struct GetEmployeesEndpoint: Endpoint {
+enum GetEmployeesEndpoint: Endpoint {
+  case getEmployees
+  case getEmptyEmployees
+  case getMalformedEmployees
+  
   struct Employees: Decodable {
     let employees: [Employee]
   }
+  
   typealias Response = Employees
   
   var method: HttpMethod { .get }
-  var path: String { "\(Self.awsBaseUrl)/employees.json" }
+  
+  var path: String {
+    switch self {
+    case .getEmployees:
+      return "\(Self.awsBaseUrl)/employees.json"
+    case .getEmptyEmployees:
+      return "\(Self.awsBaseUrl)/employees_empty.json"
+    case .getMalformedEmployees:
+      return "\(Self.awsBaseUrl)/employees_malformed.json"
+    }
+  }
 }
