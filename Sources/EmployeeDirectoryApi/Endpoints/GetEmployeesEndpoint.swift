@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GetEmployeesEndpoint: Endpoint {
+public enum GetEmployeesEndpoint: Endpoint {
   case getEmployees
   case getEmptyEmployees
   case getMalformedEmployees

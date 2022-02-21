@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Employee: Decodable {
-  enum EmploymentType: String, Decodable {
+public struct Employee: Decodable {
+  public enum EmploymentType: String, Decodable {
     case contractor = "CONTRACTOR"
     case fullTime = "FULL_TIME"
     case partTime = "PART_TIME"
   }
   
-  enum Team: String, Decodable {
+  public enum Team: String, Decodable {
     case appointments = "Appointments"
     case cash = "Cash"
     case core = "Core"
@@ -29,7 +29,7 @@ struct Employee: Decodable {
   }
   
   // Create a mapping between our Swift property names and the JSON payload property names
-  enum CodingKeys: String, CodingKey {
+  public enum CodingKeys: String, CodingKey {
     case biography
     case emailAddress = "email_address"
     case employeeType = "employee_type"
@@ -41,13 +41,13 @@ struct Employee: Decodable {
     case uuid
   }
   
-  let uuid: String
-  let fullName: String
-  let phoneNumber: String?
-  let emailAddress: String
-  let biography: String?
-  let smallPhotoUrlString: String?
-  let largePhotoUrlString: String?
-  let team: Team
-  let employeeType: EmploymentType
+  public let uuid: String
+  public let fullName: String
+  public let phoneNumber: String?
+  public let emailAddress: String
+  public let biography: String?
+  public let smallPhotoUrlString: String?
+  public let largePhotoUrlString: String?
+  public let team: Team
+  public let employeeType: EmploymentType
 }

@@ -20,7 +20,7 @@ protocol Endpoint {
   // The response that the endpoint returns
   associatedtype Response: Decodable
   
-  /// The HTTP method for this endpoing (e.g. GET)
+  /// The HTTP method for this endpoint (e.g. GET)
   var method: HttpMethod { get }
   /// The URL for the endpoint
   var path: String { get }
@@ -37,7 +37,7 @@ extension Endpoint {
   
   /// Invoke this `Endpoint` and return its response decoded into the  expected return type
   ///  Parameter urlSession: the `URLSession` to use for this endpoint call.  Defaults to `.shared`
-  func invoke(urlSession: URLSession = .shared) async throws -> Response? {
+  public func invoke(urlSession: URLSession = .shared) async throws -> Response? {
     guard let url = URL(string: path) else {
       // TODO (dittmar): throw malformed URL error instead
       return nil
