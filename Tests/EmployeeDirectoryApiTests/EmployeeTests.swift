@@ -56,4 +56,15 @@ final class EmployeeTests: XCTestCase {
     
     XCTAssertThrowsError(try JSONDecoder().decode(GetEmployeesEndpoint.Employees.self, from: json))
   }
+  
+  // Make sure that an employee with the minimum data required works
+  func testSpareEmployee() throws {
+    let employee = try JSONDecoder().decode(Employee.self, from: readJson(from: "sparse_employee")!)
+    
+    XCTAssertEqual("some-uuid", employee.uuid)
+    XCTAssertEqual("Kevin Dittmar", employee.fullName)
+    XCTAssertEqual("kevinhd4@gmail.com", employee.emailAddress)
+    XCTAssertEqual(.pointOfSale, employee.team)
+    XCTAssertEqual(.fullTime, employee.employeeType)
+  }
 }

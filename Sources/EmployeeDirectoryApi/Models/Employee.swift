@@ -43,7 +43,7 @@ struct Employee: Decodable {
   
   let uuid: String
   let fullName: String
-  let phoneNumber: String
+  let phoneNumber: String?
   let emailAddress: String
   let biography: String?
   let smallPhotoUrlString: String?
