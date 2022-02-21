@@ -13,7 +13,7 @@ public enum GetEmployeesEndpoint: Endpoint {
   case getMalformedEmployees
   
   public struct Employees: Decodable {
-    let employees: [Employee]
+    public let employees: [Employee]
   }
   
   public typealias Response = Employees
