@@ -12,15 +12,15 @@ public enum GetEmployeesEndpoint: Endpoint {
   case getEmptyEmployees
   case getMalformedEmployees
   
-  struct Employees: Decodable {
+  public struct Employees: Decodable {
     let employees: [Employee]
   }
   
-  typealias Response = Employees
+  public typealias Response = Employees
   
-  var method: HttpMethod { .get }
+  public var method: HttpMethod { .get }
   
-  var path: String {
+  public var path: String {
     switch self {
     case .getEmployees:
       return "\(Self.awsBaseUrl)/employees.json"

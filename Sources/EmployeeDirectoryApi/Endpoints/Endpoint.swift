@@ -9,14 +9,14 @@
 import Foundation
 
 /// Enum used to define which HTTP method an endpoint will be using
-enum HttpMethod {
+public enum HttpMethod {
   case delete
   case get
   case post
   case put
 }
 
-protocol Endpoint {
+public protocol Endpoint {
   // The response that the endpoint returns
   associatedtype Response: Decodable
   
