@@ -28,7 +28,7 @@ public protocol Endpoint {
   /// Invoke this `Endpoint` and return its response decoded into the  expected return type
   ///  - Parameter urlSession: the `URLSession` to use for this endpoint call.
   ///  - Returns: the response from the server for the invoked endpoint
-  func invoke(urlSession: URLSession) async throws -> Response?
+  func invoke(urlSession: URLSession) async throws -> Response
 }
 
 extension Endpoint {
@@ -38,7 +38,7 @@ extension Endpoint {
   /// Invoke this `Endpoint` and return its response decoded into the  expected return type
   /// - Parameter urlSession: the `URLSession` to use for this endpoint call.  Defaults to `.shared`
   /// - Throws: Throws an error with code -1 if the URL derived from the endpoint is malformed
-  public func invoke(urlSession: URLSession = .shared) async throws -> Response? {
+  public func invoke(urlSession: URLSession = .shared) async throws -> Response {
     guard let url = URL(string: path) else {
       throw NSError(domain: "com.dittmar.Employee-Directory-API", code: -1, userInfo: ["message": "Invalid endpoint URL"])
     }
