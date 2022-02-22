@@ -5,7 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "EmployeeDirectoryApi",
-    platforms: [.iOS(.v15)],
+    // macOS version is specified to make GitHub Actions happy to run the tests.
+    // Otherwise, it fails, even though they pass locally.
+    platforms: [.iOS(.v15), .macOS(.v12)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
