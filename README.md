@@ -2,8 +2,10 @@
 This is the API for the employee directory project in its own Swift Package Manager compliant package.
 
 ## Build tools & versions used
+- Xcode 13.2.1
 - swift-tools-version 5.5, the latest for Swift Package Manager as of writing.
 - iOS 15 to be able to make use of some of the newest stuff
+- GitHub Actions for CI/CD
 
 ## Steps to run the app
 The only thing you can really do here is run the tests.  If you don't want to run them through Xcode, you can see their last execution with my last push to GitHub triggered by GitHub Actions
