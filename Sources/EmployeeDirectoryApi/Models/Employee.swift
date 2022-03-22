@@ -50,4 +50,16 @@ public struct Employee: Decodable {
   public let largePhotoUrlString: String?
   public let team: Team
   public let employeeType: EmploymentType
+  
+  public init(uuid: String, fullName: String, phoneNumber: String?, emailAddress: String, biography: String?, smallPhotoUrlString: String?, largePhotoUrlString: String?, team: Team, employeeType: EmploymentType) {
+    self.uuid = uuid
+    self.fullName = fullName
+    self.phoneNumber = phoneNumber
+    self.emailAddress = emailAddress
+    self.biography = biography
+    self.smallPhotoUrlString = smallPhotoUrlString
+    self.largePhotoUrlString = largePhotoUrlString
+    self.team = team
+    self.employeeType = employeeType
+  }
 }
